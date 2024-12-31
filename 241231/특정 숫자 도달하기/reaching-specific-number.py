@@ -9,4 +9,6 @@ for i in range(10):
     sum+=arr[i]
     index = i
 
-print(sum, sum/i)
+average = float(sum/i)
+
+print(sum, average)
