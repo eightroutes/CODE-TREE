@@ -1,5 +1,6 @@
 arr = list(map(int, input().split()))
 
+
 grade_arr = [100-10*i for i in range(10)]
 count_arr = [0]*10
 
