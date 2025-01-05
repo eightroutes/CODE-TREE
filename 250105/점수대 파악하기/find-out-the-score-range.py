@@ -1,12 +1,14 @@
 arr = list(map(int, input().split()))
 
-grade_arr = [0] * 10
+count_arr = [0] * 11
 
 for elem in arr:
     if elem == 0:
         break
-    idx = 10 - (elem // 10)
-    grade_arr[idx] += 1   
+    if elem < 10:
+        continue
+    count_arr[elem//10] += 1
 
-for i in range(10):
-    print(f"{100-10*i} - {grade_arr[i]}")
+
+for i in range(10, 0, -1):
+    print(f"{i}0 - {count_arr[i]}")
