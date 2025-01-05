@@ -1,14 +1,16 @@
 arr = list(map(int, input().split()))
 
-count_arr = [0] * 11
+cnt_arr = [0]*10
 
 for elem in arr:
     if elem == 0:
         break
     if elem < 10:
         continue
-    count_arr[elem//10] += 1
+    idx = 10 - (elem // 10)
+    cnt_arr[idx] += 1
 
-
-for i in range(10, 0, -1):
-    print(f"{i}0 - {count_arr[i]}")
+for i in range(10):
+    print(f"{10-i}0 - {cnt_arr[i]}")
+    
+    
