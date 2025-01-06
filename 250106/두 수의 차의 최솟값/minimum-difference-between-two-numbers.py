@@ -1,11 +1,10 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-result = []
-for i in range(n):
-    a = arr[i]
-    for j in range(i+1, n):
-        b = arr[j]
-        result.append(b-a)
+min_val = arr[1] - arr[0]
 
-print(min(result))
+for i in range(2, n):
+    if arr[i] - arr[i-1] < min_val:
+        min_val = arr[i] - arr[i-1]
+
+print(min_val)
