@@ -3,11 +3,17 @@ nums = list(map(int, input().split()))
 
 
 # Write your code here!
-       
+max_num = nums[0]
 
-nums_set = set(nums)
+for elem in nums:
+   
+    if max_num <= elem:
+        if elem == max_num:
+            max_num=-1
+        else:
+            max_num = elem
 
-if len(nums_set) == len(nums) // 2:
-    print(-1)
-else:
-    print(max(nums))
+
+print(max_num)
+    
+
