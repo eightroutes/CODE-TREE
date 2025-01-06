@@ -1,14 +1,24 @@
 n = int(input())
 price = list(map(int, input().split()))
 
-# Write your code here!
+result = []
+isNotZ =False
+for i in range(n):
+    min_v = price[i]
+    max_v = 1
+    for j in range(i+1, n):
+        if price[j] - min_v > max_v:
+            max_v = price[j] - min_v
+            isNotZ = True
+        result.append(max_v)
 
-min_p = min(price)
-idx = price.index(min_p)
-max_p = 0
-for i in range(idx, n):
-    if price[i] > max_p:
-        max_p = price[i]
+if isNotZ == False:
+    print(0)
+else: 
+    print(max(result))
 
-print(max_p-min_p)
+
+
+
+
 
