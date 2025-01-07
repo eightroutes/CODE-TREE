@@ -2,7 +2,7 @@ n, m = list(map(int, input().split()))
 
 arr = [
     [0 for _ in range(m)]
-    for _ in range(4)
+    for _ in range(n)
 ]
 
 x = 1
@@ -11,7 +11,7 @@ for i in range(n):
         arr[i][j] = x
         x+=1
 
-for elem in arr:
-    for elem_in in elem:
-        print(elem_in, end=" ")
+for row in arr:
+    for elem in row:
+        print(elem, end=" ")
     print()
