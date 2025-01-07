@@ -14,9 +14,10 @@ for i in range(2):
     res1 = 0
 print()
 
-for i in range(4):
-    res2 = (arr[0][i] + arr[1][i]) / 2
-    print(round(res2,1), end=" ")
+for j in range(4):
+    for i in range(2):
+        res2 += arr[i][j]
+    print(round(res2/2,1), end=" ")
 print()
 
 res3 = (sum(arr[0]) + sum(arr[1])) / 8
