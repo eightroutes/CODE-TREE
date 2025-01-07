@@ -18,6 +18,7 @@ for j in range(4):
     for i in range(2):
         res2 += arr[i][j]
     print(round(res2/2,1), end=" ")
+    res2 = 0
 print()
 
 res3 = (sum(arr[0]) + sum(arr[1])) / 8
