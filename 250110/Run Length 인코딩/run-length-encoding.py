@@ -9,6 +9,8 @@ for i in range(1, len(A)):
         if A[i] not in arr:
             arr.append(A[i-1])
     elif A[i-1] != A[i]:
+        if(arr==None):
+            arr.append(A[i-1])
         arr.append(str(cnt))
         cnt = 1
         arr.append(A[i])
