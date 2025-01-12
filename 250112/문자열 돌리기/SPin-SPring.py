@@ -3,6 +3,7 @@ string = input()
 leng = len(string)
 
 print(string)
-for i in range(1, leng):
-    print(string[-i:] + string[0:leng-i])
-print(string)
+
+for _ in range(leng):
+    string = string[-1] + string[:-1]
+    print(string)
