@@ -3,9 +3,10 @@ a, b = input().split()
 int_a = 0 
 int_b = 0
 
-if a.isdigit() == True:
+if a.isdigit():
     int_a = int(a)
-elif b.isdigit() == True:
+    
+if b.isdigit():
     int_b = int(b)
 
 for i in range(len(a)):
